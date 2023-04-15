@@ -35,11 +35,19 @@ func _process(delta):
 		
 	var direction = Vector3(
 		float(Input.is_physical_key_pressed(KEY_D)) - float(Input.is_physical_key_pressed(KEY_A)),
-		float(Input.is_physical_key_pressed(KEY_E)) - float(Input.is_physical_key_pressed(KEY_Q)), 
+		0, 
 		float(Input.is_physical_key_pressed(KEY_S)) - float(Input.is_physical_key_pressed(KEY_W))
 	).normalized()
 	
+	var global_direction = Vector3(
+		0,
+		float(Input.is_physical_key_pressed(KEY_E)) - float(Input.is_physical_key_pressed(KEY_Q)), 
+		0
+	)
+	
 	if Input.is_physical_key_pressed(KEY_SHIFT): # boost
 		translate(direction * _velocity * delta * boost_speed_multiplier)
+		global_translate(gloabal_direction * _velocity * delta * boost_speed_multiplier)
 	else:
 		translate(direction * _velocity * delta)
+		global_translate(direction * _velocity * delta)
