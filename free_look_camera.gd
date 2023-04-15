@@ -47,7 +47,7 @@ func _process(delta):
 	
 	if Input.is_physical_key_pressed(KEY_SHIFT): # boost
 		translate(direction * _velocity * delta * boost_speed_multiplier)
-		global_translate(gloabal_direction * _velocity * delta * boost_speed_multiplier)
+		global_translate(global_direction * _velocity * delta * boost_speed_multiplier)
 	else:
 		translate(direction * _velocity * delta)
-		global_translate(direction * _velocity * delta)
+		global_translate(global_direction * _velocity * delta)
