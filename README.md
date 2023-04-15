@@ -6,7 +6,7 @@ A simple and easy to use free look camera for Godot 4 that mimics the controls o
 - Look around by holding right click and moving the mouse
 - Move forward and backward with W and S
 - Move left and right with A and D
-- Move up and down with Q and E 
+- Move up and down with Q and E in global coordinates
 - Change movement speed by using the scroll wheel 
 - Temporary increase speed by holding shift
 
